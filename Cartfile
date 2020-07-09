@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire"
+github "SVProgressHUD/SVProgressHUD"
+github "SwiftyJSON/SwiftyJSON"
+gitHub "realm/realm-cocoa"
