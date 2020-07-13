@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="PersonCD" representedClassName=".PersonCD" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="surname" optional="YES" attributeType="String"/>
-    </entity>
     <entity name="TaskCD" representedClassName=".TaskCD" syncable="YES" codeGenerationType="class">
         <attribute name="text" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="PersonCD" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="TaskCD" positionX="132.11328125" positionY="16.24609375" width="128" height="58"/>
     </elements>
 </model>

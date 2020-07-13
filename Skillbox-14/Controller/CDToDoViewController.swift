@@ -21,7 +21,8 @@ class CDToDoViewController: UIViewController {
       return
     }
     if task != ""{
-      TaskPersistance.shared.addTask(task)
+//      TaskPersistance.shared.addTask(task)
+      CoreDataManager.instance.saveData(data: task)
     }
     reloadTableView()
     showButton(.add)
@@ -34,7 +35,7 @@ class CDToDoViewController: UIViewController {
   
   @IBAction func delTask(_ sender: Any) {
     if !CDTableViewController.shareInstance.selectedTasks.isEmpty{
-      TaskPersistance.shared.delTasks(CDTableViewController.shareInstance.selectedTasks)
+      CoreDataManager.instance.deleteObject(CDTableViewController.shareInstance.selectedTasks)
       CDTableViewController.shareInstance.selectedTasks = []
     }
     reloadTableView()

@@ -35,12 +35,12 @@ class CDTableViewController: UIViewController {
 
 extension CDTableViewController: UITableViewDataSource, UITableViewDelegate{
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return TaskPersistance.shared.allTasks().count
+    return CoreDataManager.instance.fetchData().count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "CDToDoCell", for: indexPath) as! CDToDoTableViewCell
-    let task = TaskPersistance.shared.allTasks()[indexPath.row].text
+    let task = CoreDataManager.instance.fetchData()[indexPath.row].value(forKey: "text") as! String
     cell.textLable.text = task
     cell.taskView.layer.cornerRadius = 15
     cell.taskView.backgroundColor = .systemGray6

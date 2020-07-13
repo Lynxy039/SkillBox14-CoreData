@@ -15,11 +15,11 @@ class ViewController: UIViewController {
   @IBOutlet weak var surnameTextField: UITextField!
   
   @IBAction func namePrinted(_ sender: Any) {
-//    CoreDataManager.instance.save(entityName: "PersonCD", att: "name", data: nameTextField.text)
+//    CoreDataManager.instance.saveData(entityName: "PersonCD", att: "name", data: nameTextField.text)
     Persistance.shared.name = nameTextField.text
   }
   @IBAction func surnamePrinted(_ sender: Any) {
-//    CoreDataManager.instance.save(entityName: "PersonCD", att: "surname", data: surnameTextField.text)
+//    CoreDataManager.instance.saveData(entityName: "PersonCD", att: "surname", data: surnameTextField.text)
     Persistance.shared.surname = surnameTextField.text
   }
   

@@ -48,7 +48,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="UserDef" id="MJ2-gJ-A12"/>
+                    <tabBarItem key="tabBarItem" title="UserDef" image="1.circle.fill" catalog="system" id="MJ2-gJ-A12"/>
                     <connections>
                         <outlet property="nameTextField" destination="i2V-ci-AgK" id="wdp-Wb-1Nt"/>
                         <outlet property="surnameTextField" destination="Say-ng-JiW" id="09C-1B-vTl"/>
@@ -62,7 +62,7 @@
         <scene sceneID="Xcl-a3-f9M">
             <objects>
                 <viewControllerPlaceholder storyboardName="ToDo" referencedIdentifier="ToDoStoryboard" id="R4p-bS-pkQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ToDo" id="0va-28-cLX"/>
+                    <tabBarItem key="tabBarItem" title="ToDo" image="2.circle.fill" catalog="system" id="0va-28-cLX"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FB5-dw-9X4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,7 +72,7 @@
         <scene sceneID="I2z-KU-fF7">
             <objects>
                 <viewControllerPlaceholder storyboardName="CD_ToDo" referencedIdentifier="CDToDoStoryboard" id="xcE-m2-hdm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="CD_ToDo" id="1KR-Uv-fCF"/>
+                    <tabBarItem key="tabBarItem" title="CD_ToDo" image="3.circle.fill" catalog="system" id="1KR-Uv-fCF"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pe7-MQ-Zz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,4 +99,9 @@
             <point key="canvasLocation" x="138.40000000000001" y="126.38680659670166"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="2.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="3.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
