@@ -11,10 +11,10 @@ import Foundation
 import CoreData
 
 
-extension Task {
+extension TaskCD {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Task> {
-        return NSFetchRequest<Task>(entityName: "Task")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<TaskCD> {
+        return NSFetchRequest<TaskCD>(entityName: "TaskCD")
     }
 
     @NSManaged public var text: String?

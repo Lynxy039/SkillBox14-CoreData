@@ -31,30 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the user discards a scene session.
     // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    // Создание нового объекта
-     let managedObject = Person()
-     
-     // Установка значения атрибута
-    managedObject.name = "ООО «Колокольчик»"
-      
-     // Извлечение значения атрибута
-     let name = managedObject.name
-     print("name = \(name)")
-     
-     // Запись объекта
-     CoreDataManager.instance.saveContext()
-     
-     // Извление записей
-     let fetchRequest = NSFetchRequest(entityName: "Customer")
-     do {
-         let results = try CoreDataManager.instance.managedObjectContext.executeFetchRequest(fetchRequest)
-         for result in results as! [Person] {
-             print("name - \(result.name!)")
-         }
-     } catch {
-         print(error)
-     }
-     return true
+    
   }
 
   // MARK: - Core Data stack
@@ -71,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           if let error = error as NSError? {
               // Replace this implementation with code to handle the error appropriately.
               // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-               
+
               /*
                Typical reasons for an error here include:
                * The parent directory does not exist, cannot be created, or disallows writing.
