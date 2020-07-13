@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3617B8F324BC84B000F98142 /* CDPersistance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3617B8F124BC84B000F98142 /* CDPersistance.xcdatamodeld */; };
+		3617B90924BC8C5500F98142 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B90824BC8C5500F98142 /* CoreDataManager.swift */; };
+		3617B91224BC8E7D00F98142 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B90E24BC8E7D00F98142 /* Person+CoreDataClass.swift */; };
+		3617B91324BC8E7D00F98142 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B90F24BC8E7D00F98142 /* Person+CoreDataProperties.swift */; };
+		3617B91424BC8E7D00F98142 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B91024BC8E7D00F98142 /* Task+CoreDataClass.swift */; };
+		3617B91524BC8E7D00F98142 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B91124BC8E7D00F98142 /* Task+CoreDataProperties.swift */; };
 		3676BF9224B274D6005DDCAF /* TasksPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676BF9124B274D6005DDCAF /* TasksPersistance.swift */; };
 		36F3B93B24ABC9320031568E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3B93A24ABC9320031568E /* AppDelegate.swift */; };
 		36F3B93D24ABC9320031568E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3B93C24ABC9320031568E /* SceneDelegate.swift */; };
@@ -50,8 +56,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3617B8F224BC84B000F98142 /* CDPersistance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDPersistance.xcdatamodel; sourceTree = "<group>"; };
+		3617B90824BC8C5500F98142 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3617B90E24BC8E7D00F98142 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataClass.swift"; path = "../../Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3617B90F24BC8E7D00F98142 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataProperties.swift"; path = "../../Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3617B91024BC8E7D00F98142 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "../../Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3617B91124BC8E7D00F98142 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "../../Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3676BF9124B274D6005DDCAF /* TasksPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksPersistance.swift; sourceTree = "<group>"; };
-		36F3B93724ABC9320031568E /* Skillbox-14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skillbox-14.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36F3B93724ABC9320031568E /* Skillbox-14-CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skillbox-14-CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F3B93A24ABC9320031568E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36F3B93C24ABC9320031568E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		36F3B93E24ABC9320031568E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +99,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3617B8FF24BC85A800F98142 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3617B90824BC8C5500F98142 /* CoreDataManager.swift */,
+				3617B90E24BC8E7D00F98142 /* Person+CoreDataClass.swift */,
+				3617B90F24BC8E7D00F98142 /* Person+CoreDataProperties.swift */,
+				3617B91024BC8E7D00F98142 /* Task+CoreDataClass.swift */,
+				3617B91124BC8E7D00F98142 /* Task+CoreDataProperties.swift */,
+				3617B8F124BC84B000F98142 /* CDPersistance.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		36F3B92E24ABC9320031568E = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +124,7 @@
 		36F3B93824ABC9320031568E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36F3B93724ABC9320031568E /* Skillbox-14.app */,
+				36F3B93724ABC9320031568E /* Skillbox-14-CoreData.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +172,7 @@
 		36F3B96324ABD4AC0031568E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3617B8FF24BC85A800F98142 /* CoreData */,
 				36F3B96524ABD5F00031568E /* Persistance.swift */,
 				3676BF9124B274D6005DDCAF /* TasksPersistance.swift */,
 			);
@@ -163,9 +189,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		36F3B93624ABC9320031568E /* Skillbox-14 */ = {
+		36F3B93624ABC9320031568E /* Skillbox-14-CoreData */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36F3B94E24ABC9350031568E /* Build configuration list for PBXNativeTarget "Skillbox-14" */;
+			buildConfigurationList = 36F3B94E24ABC9350031568E /* Build configuration list for PBXNativeTarget "Skillbox-14-CoreData" */;
 			buildPhases = (
 				36F3B93324ABC9320031568E /* Sources */,
 				36F3B93424ABC9320031568E /* Frameworks */,
@@ -176,9 +202,9 @@
 			);
 			dependencies = (
 			);
-			name = "Skillbox-14";
+			name = "Skillbox-14-CoreData";
 			productName = "Skillbox-14";
-			productReference = 36F3B93724ABC9320031568E /* Skillbox-14.app */;
+			productReference = 36F3B93724ABC9320031568E /* Skillbox-14-CoreData.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 36F3B93224ABC9320031568E /* Build configuration list for PBXProject "Skillbox-14" */;
+			buildConfigurationList = 36F3B93224ABC9320031568E /* Build configuration list for PBXProject "Skillbox-14-CoreData" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -209,7 +235,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				36F3B93624ABC9320031568E /* Skillbox-14 */,
+				36F3B93624ABC9320031568E /* Skillbox-14-CoreData */,
 			);
 		};
 /* End PBXProject section */
@@ -234,11 +260,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3676BF9224B274D6005DDCAF /* TasksPersistance.swift in Sources */,
+				3617B91224BC8E7D00F98142 /* Person+CoreDataClass.swift in Sources */,
+				3617B91424BC8E7D00F98142 /* Task+CoreDataClass.swift in Sources */,
+				3617B90924BC8C5500F98142 /* CoreDataManager.swift in Sources */,
+				3617B91524BC8E7D00F98142 /* Task+CoreDataProperties.swift in Sources */,
 				36F3B96C24AD1FC10031568E /* TableViewController.swift in Sources */,
 				36F3B93F24ABC9320031568E /* ViewController.swift in Sources */,
 				36F3B96E24AD1FDA0031568E /* ToDoTableViewCell.swift in Sources */,
 				36F3B93B24ABC9320031568E /* AppDelegate.swift in Sources */,
 				36F3B96624ABD5F00031568E /* Persistance.swift in Sources */,
+				3617B91324BC8E7D00F98142 /* Person+CoreDataProperties.swift in Sources */,
+				3617B8F324BC84B000F98142 /* CDPersistance.xcdatamodeld in Sources */,
 				36F3B96824AD10C50031568E /* ToDoViewController.swift in Sources */,
 				36F3B93D24ABC9320031568E /* SceneDelegate.swift in Sources */,
 			);
@@ -395,8 +427,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Lynxy.Skillbox-14";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lynxy.Skillbox-14-CoreData";
+				PRODUCT_NAME = "Skillbox-14-CoreData";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -417,8 +449,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Lynxy.Skillbox-14";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lynxy.Skillbox-14-CoreData";
+				PRODUCT_NAME = "Skillbox-14-CoreData";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -427,7 +459,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		36F3B93224ABC9320031568E /* Build configuration list for PBXProject "Skillbox-14" */ = {
+		36F3B93224ABC9320031568E /* Build configuration list for PBXProject "Skillbox-14-CoreData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36F3B94C24ABC9350031568E /* Debug */,
@@ -436,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36F3B94E24ABC9350031568E /* Build configuration list for PBXNativeTarget "Skillbox-14" */ = {
+		36F3B94E24ABC9350031568E /* Build configuration list for PBXNativeTarget "Skillbox-14-CoreData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36F3B94F24ABC9350031568E /* Debug */,
@@ -446,6 +478,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3617B8F124BC84B000F98142 /* CDPersistance.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3617B8F224BC84B000F98142 /* CDPersistance.xcdatamodel */,
+			);
+			currentVersion = 3617B8F224BC84B000F98142 /* CDPersistance.xcdatamodel */;
+			path = CDPersistance.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 36F3B92F24ABC9320031568E /* Project object */;
 }
