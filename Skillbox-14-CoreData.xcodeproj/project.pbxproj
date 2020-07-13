@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3617B8F324BC84B000F98142 /* CDPersistance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3617B8F124BC84B000F98142 /* CDPersistance.xcdatamodeld */; };
 		3617B90924BC8C5500F98142 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B90824BC8C5500F98142 /* CoreDataManager.swift */; };
+		3617B92A24BCF30100F98142 /* CDToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B92724BCF30000F98142 /* CDToDoViewController.swift */; };
+		3617B92B24BCF30100F98142 /* CDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B92824BCF30100F98142 /* CDTableViewController.swift */; };
+		3617B92C24BCF30100F98142 /* CDToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B92924BCF30100F98142 /* CDToDoTableViewCell.swift */; };
 		3676BF9224B274D6005DDCAF /* TasksPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676BF9124B274D6005DDCAF /* TasksPersistance.swift */; };
 		36F3B93B24ABC9320031568E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3B93A24ABC9320031568E /* AppDelegate.swift */; };
 		36F3B93D24ABC9320031568E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3B93C24ABC9320031568E /* SceneDelegate.swift */; };
@@ -54,6 +57,10 @@
 /* Begin PBXFileReference section */
 		3617B8F224BC84B000F98142 /* CDPersistance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDPersistance.xcdatamodel; sourceTree = "<group>"; };
 		3617B90824BC8C5500F98142 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3617B92624BCF2CE00F98142 /* CD_ToDo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CD_ToDo.storyboard; sourceTree = "<group>"; };
+		3617B92724BCF30000F98142 /* CDToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDToDoViewController.swift; sourceTree = "<group>"; };
+		3617B92824BCF30100F98142 /* CDTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDTableViewController.swift; sourceTree = "<group>"; };
+		3617B92924BCF30100F98142 /* CDToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDToDoTableViewCell.swift; sourceTree = "<group>"; };
 		3676BF9124B274D6005DDCAF /* TasksPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksPersistance.swift; sourceTree = "<group>"; };
 		36F3B93724ABC9320031568E /* Skillbox-14-CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skillbox-14-CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F3B93A24ABC9320031568E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +132,7 @@
 				36F3B96224ABD49A0031568E /* Controller */,
 				36F3B94024ABC9320031568E /* Main.storyboard */,
 				36F3B96924AD10ED0031568E /* ToDo.storyboard */,
+				3617B92624BCF2CE00F98142 /* CD_ToDo.storyboard */,
 				36F3B94624ABC9350031568E /* Assets.xcassets */,
 				36F3B93A24ABC9320031568E /* AppDelegate.swift */,
 				36F3B93C24ABC9320031568E /* SceneDelegate.swift */,
@@ -153,6 +161,9 @@
 				36F3B96724AD10C50031568E /* ToDoViewController.swift */,
 				36F3B96B24AD1FC10031568E /* TableViewController.swift */,
 				36F3B96D24AD1FDA0031568E /* ToDoTableViewCell.swift */,
+				3617B92724BCF30000F98142 /* CDToDoViewController.swift */,
+				3617B92824BCF30100F98142 /* CDTableViewController.swift */,
+				3617B92924BCF30100F98142 /* CDToDoTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,12 +261,15 @@
 				3676BF9224B274D6005DDCAF /* TasksPersistance.swift in Sources */,
 				3617B90924BC8C5500F98142 /* CoreDataManager.swift in Sources */,
 				36F3B96C24AD1FC10031568E /* TableViewController.swift in Sources */,
+				3617B92C24BCF30100F98142 /* CDToDoTableViewCell.swift in Sources */,
 				36F3B93F24ABC9320031568E /* ViewController.swift in Sources */,
 				36F3B96E24AD1FDA0031568E /* ToDoTableViewCell.swift in Sources */,
 				36F3B93B24ABC9320031568E /* AppDelegate.swift in Sources */,
 				36F3B96624ABD5F00031568E /* Persistance.swift in Sources */,
+				3617B92B24BCF30100F98142 /* CDTableViewController.swift in Sources */,
 				3617B8F324BC84B000F98142 /* CDPersistance.xcdatamodeld in Sources */,
 				36F3B96824AD10C50031568E /* ToDoViewController.swift in Sources */,
+				3617B92A24BCF30100F98142 /* CDToDoViewController.swift in Sources */,
 				36F3B93D24ABC9320031568E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
