@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		3617B8F324BC84B000F98142 /* CDPersistance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3617B8F124BC84B000F98142 /* CDPersistance.xcdatamodeld */; };
 		3617B90924BC8C5500F98142 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B90824BC8C5500F98142 /* CoreDataManager.swift */; };
-		3617B92224BC93B600F98142 /* TaskCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B91E24BC93B600F98142 /* TaskCD+CoreDataClass.swift */; };
-		3617B92324BC93B600F98142 /* TaskCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B91F24BC93B600F98142 /* TaskCD+CoreDataProperties.swift */; };
-		3617B92424BC93B600F98142 /* PersonCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B92024BC93B600F98142 /* PersonCD+CoreDataClass.swift */; };
-		3617B92524BC93B600F98142 /* PersonCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617B92124BC93B600F98142 /* PersonCD+CoreDataProperties.swift */; };
 		3676BF9224B274D6005DDCAF /* TasksPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676BF9124B274D6005DDCAF /* TasksPersistance.swift */; };
 		36F3B93B24ABC9320031568E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3B93A24ABC9320031568E /* AppDelegate.swift */; };
 		36F3B93D24ABC9320031568E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3B93C24ABC9320031568E /* SceneDelegate.swift */; };
@@ -58,10 +54,6 @@
 /* Begin PBXFileReference section */
 		3617B8F224BC84B000F98142 /* CDPersistance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDPersistance.xcdatamodel; sourceTree = "<group>"; };
 		3617B90824BC8C5500F98142 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		3617B91E24BC93B600F98142 /* TaskCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TaskCD+CoreDataClass.swift"; path = "../../TaskCD+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3617B91F24BC93B600F98142 /* TaskCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TaskCD+CoreDataProperties.swift"; path = "../../TaskCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3617B92024BC93B600F98142 /* PersonCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PersonCD+CoreDataClass.swift"; path = "../../PersonCD+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3617B92124BC93B600F98142 /* PersonCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PersonCD+CoreDataProperties.swift"; path = "../../PersonCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3676BF9124B274D6005DDCAF /* TasksPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksPersistance.swift; sourceTree = "<group>"; };
 		36F3B93724ABC9320031568E /* Skillbox-14-CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skillbox-14-CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F3B93A24ABC9320031568E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,10 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				3617B90824BC8C5500F98142 /* CoreDataManager.swift */,
-				3617B91E24BC93B600F98142 /* TaskCD+CoreDataClass.swift */,
-				3617B91F24BC93B600F98142 /* TaskCD+CoreDataProperties.swift */,
-				3617B92024BC93B600F98142 /* PersonCD+CoreDataClass.swift */,
-				3617B92124BC93B600F98142 /* PersonCD+CoreDataProperties.swift */,
 				3617B8F124BC84B000F98142 /* CDPersistance.xcdatamodeld */,
 			);
 			name = CoreData;
@@ -264,15 +252,11 @@
 				36F3B96C24AD1FC10031568E /* TableViewController.swift in Sources */,
 				36F3B93F24ABC9320031568E /* ViewController.swift in Sources */,
 				36F3B96E24AD1FDA0031568E /* ToDoTableViewCell.swift in Sources */,
-				3617B92424BC93B600F98142 /* PersonCD+CoreDataClass.swift in Sources */,
 				36F3B93B24ABC9320031568E /* AppDelegate.swift in Sources */,
 				36F3B96624ABD5F00031568E /* Persistance.swift in Sources */,
 				3617B8F324BC84B000F98142 /* CDPersistance.xcdatamodeld in Sources */,
-				3617B92224BC93B600F98142 /* TaskCD+CoreDataClass.swift in Sources */,
 				36F3B96824AD10C50031568E /* ToDoViewController.swift in Sources */,
-				3617B92324BC93B600F98142 /* TaskCD+CoreDataProperties.swift in Sources */,
 				36F3B93D24ABC9320031568E /* SceneDelegate.swift in Sources */,
-				3617B92524BC93B600F98142 /* PersonCD+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

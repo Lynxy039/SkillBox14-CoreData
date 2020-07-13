@@ -10,58 +10,32 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-  var person: NSManagedObject?
 
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var surnameTextField: UITextField!
   
   @IBAction func namePrinted(_ sender: Any) {
-    Persistance.shared.name = nameTextField.text
+    CoreDataManager.instance.save(entityName: "PersonCD", att: "name", data: nameTextField.text)
+//    Persistance.shared.name = nameTextField.text
   }
   @IBAction func surnamePrinted(_ sender: Any) {
-    Persistance.shared.surname = surnameTextField.text
+    CoreDataManager.instance.save(entityName: "PersonCD", att: "surname", data: surnameTextField.text)
+//    Persistance.shared.surname = surnameTextField.text
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let name = "123"
-    print(person)
-    save(name: name)
-    print (person)
-    nameTextField.text = Persistance.shared.name
-    surnameTextField.text = Persistance.shared.surname
-    
-  }
-  
-  func save(name: String) {
-    
-    guard let appDelegate =
-      UIApplication.shared.delegate as? AppDelegate else {
-      return
+    let person = CoreDataManager.instance.fetchData("PersonCD")
+    let name = person[0].value(forKeyPath: "name") as? String
+    let surname = person[0].value(forKeyPath: "surname") as? String
+    print(person.count)
+    for i in person{
+      print (i.value(forKeyPath: "name"),i.value(forKeyPath: "surname"))
     }
-    
-    // 1
-    let managedContext =
-      appDelegate.persistentContainer.viewContext
-    
-    // 2
-    let entity =
-      NSEntityDescription.entity(forEntityName: "PersonCD",
-                                 in: managedContext)!
-    
-    let person = NSManagedObject(entity: entity,
-                                 insertInto: managedContext)
-    
-    // 3
-    person.setValue(name, forKeyPath: "name")
-    
-    // 4
-    do {
-      try managedContext.save()
-      self.person = person
-    } catch let error as NSError {
-      print("Could not save. \(error), \(error.userInfo)")
-    }
+    nameTextField.text = name
+    surnameTextField.text = surname
+//    nameTextField.text = Persistance.shared.name
+//    surnameTextField.text = Persistance.shared.surname
   }
 }
 
