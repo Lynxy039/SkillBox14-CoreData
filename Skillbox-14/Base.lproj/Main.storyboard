@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LE3-jN-gWL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LE3-jN-gWL">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -68,6 +68,16 @@
             </objects>
             <point key="canvasLocation" x="1050" y="652"/>
         </scene>
+        <!--WeatherStoryboard-->
+        <scene sceneID="pYY-s1-5GN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Weather" referencedIdentifier="WeatherStoryboard" id="OJr-Sm-Wvw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Weather" image="4.circle.fill" catalog="system" id="Mnz-Mq-bWI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nn5-ng-3rf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154" y="790"/>
+        </scene>
         <!--CDToDoStoryboard-->
         <scene sceneID="I2z-KU-fF7">
             <objects>
@@ -92,6 +102,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="cLd-B0-b2G"/>
                         <segue destination="R4p-bS-pkQ" kind="relationship" relationship="viewControllers" id="Ufd-wd-wy1"/>
                         <segue destination="xcE-m2-hdm" kind="relationship" relationship="viewControllers" id="0u0-aN-GhM"/>
+                        <segue destination="OJr-Sm-Wvw" kind="relationship" relationship="viewControllers" id="xZq-Lg-iQa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfe-vr-cVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -103,5 +114,6 @@
         <image name="1.circle.fill" catalog="system" width="128" height="121"/>
         <image name="2.circle.fill" catalog="system" width="128" height="121"/>
         <image name="3.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="4.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
