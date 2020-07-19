@@ -23,17 +23,25 @@ class CurrentViewController: UIViewController {
     super.viewDidLoad()
     currentView.layer.cornerRadius = 30
     tempView.layer.cornerRadius = 15
-    
-    WeatherLoader().loadCurrentWeather { weather, image in
-      self.cityLable.text = weather.city + ", " + dateFormatter(Date(), format: "MMMMdEE")
-      if let image = image {
-        self.weatherImageView.image = UIImage(data: image)
-      }
-      self.descriptionLable.text = weather.description
-      self.curTLable.text = "\(weather.curT)℃"
-      self.minTLable.text = "\(weather.minT)"
-      self.maxTLable.text = "\(weather.maxT)"
-      self.feelsLable.text = "ощущается как \(weather.feels)℃"
+    let (current, image, _, _) = WeatherPersistance.shared.load()
+    if let weather = CurrentWeather(realm: current[0]),let image = image[0]{
+      assigment(weather, image)
     }
+    WeatherLoader().loadCurrentWeather { weather, image in
+      self.assigment(weather, image)
+    }
+  }
+  
+  
+  func assigment(_ weather: CurrentWeather,_ image: Data?){
+    self.cityLable.text = weather.city + ", " + dateFormatter(Date(), format: "MMMMdEE")
+    if let image = image {
+      self.weatherImageView.image = UIImage(data: image)
+    }
+    self.descriptionLable.text = weather.description
+    self.curTLable.text = "\(weather.curT)℃"
+    self.minTLable.text = "\(weather.minT)"
+    self.maxTLable.text = "\(weather.maxT)"
+    self.feelsLable.text = "ощущается как \(weather.feels)℃"
   }
 }

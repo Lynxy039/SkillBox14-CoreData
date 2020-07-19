@@ -10,14 +10,14 @@ import Foundation
 import SwiftyJSON
 import RealmSwift
 
-class DailyWeather: Object{
-  @objc dynamic var date: Date
-  @objc dynamic var imageName: String
-  @objc dynamic var descript: String
-  @objc dynamic var dayT: Int
-  @objc dynamic var nightT: Int
-  @objc dynamic var feelsDay: Int
-  @objc dynamic var feelsNight: Int
+class DailyWeather{
+  var date: Date
+  var imageName: String
+  var description: String
+  var dayT: Int
+  var nightT: Int
+  var feelsDay: Int
+  var feelsNight: Int
   
   init?(data: JSON){
     guard let date = data["dt"].double,
@@ -32,14 +32,39 @@ class DailyWeather: Object{
     }
   self.date = Date(timeIntervalSince1970: date)
   self.imageName = imageName
-  self.descript = description
+  self.description = description
   self.dayT = Int(dayT)
   self.nightT = Int(nightT)
   self.feelsDay = Int(feelsDay)
   self.feelsNight = Int(feelsNight)
   }
-  
-  required init() {
-    fatalError("init() has not been implemented")
-  }
 }
+//class DailyWeatherRealm: Object{
+//  @objc dynamic var date: Date = Date()
+//  @objc dynamic var imageName: String = ""
+//  @objc dynamic var descript: String = ""
+//  @objc dynamic var dayT: Int = 0
+//  @objc dynamic var nightT: Int = 0
+//  @objc dynamic var feelsDay: Int = 0
+//  @objc dynamic var feelsNight: Int = 0
+//}
+//class DailyPersistance{
+//  static let shared = DailyPersistance()
+//  
+//  private let realm = try! Realm()
+//  
+//  func load() -> [DailyWeatherRealm]{
+//      var dailyArray: [DailyWeatherRealm] = []
+//      let allDaily = realm.objects(DailyWeatherRealm.self)
+//      for i in allDaily {dailyArray += [i]}
+//      return dailyArray
+//  }
+//
+//  func save(_ forSave: [DailyWeatherRealm]){
+//    try! realm.write{
+//      realm.delete(self.load())
+//      realm.add(forSave)
+//    }
+//  }
+//}
+
