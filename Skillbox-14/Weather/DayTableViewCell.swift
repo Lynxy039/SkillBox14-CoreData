@@ -9,7 +9,6 @@
 import UIKit
 
 class DayTableViewCell: UITableViewCell {
-
   @IBOutlet weak var dayImageView: UIImageView!
   @IBOutlet weak var dateLable: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
@@ -17,5 +16,4 @@ class DayTableViewCell: UITableViewCell {
   @IBOutlet weak var nightTLabel: UILabel!
   @IBOutlet weak var feelsDayLabel: UILabel!
   @IBOutlet weak var feelsNightLabel: UILabel!
-  
 }

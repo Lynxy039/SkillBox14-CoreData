@@ -22,7 +22,8 @@
 		361D651324C1BC8C001F211D /* CurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361D650B24C1BC8C001F211D /* CurrentViewController.swift */; };
 		361D651424C1BC8C001F211D /* CurrentWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361D650C24C1BC8C001F211D /* CurrentWeatherModel.swift */; };
 		361D651524C1BC8C001F211D /* WeatherLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361D650D24C1BC8C001F211D /* WeatherLoader.swift */; };
-		361D651D24C1CEEE001F211D /* WeatherPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361D651C24C1CEEE001F211D /* WeatherPersistance.swift */; };
+		36202DA024C4DF0200C21158 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36202D9F24C4DF0200C21158 /* Kingfisher.framework */; };
+		36202DA124C4DF0200C21158 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36202D9F24C4DF0200C21158 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3676BF9224B274D6005DDCAF /* TasksPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676BF9124B274D6005DDCAF /* TasksPersistance.swift */; };
 		36F3B93B24ABC9320031568E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3B93A24ABC9320031568E /* AppDelegate.swift */; };
 		36F3B93D24ABC9320031568E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3B93C24ABC9320031568E /* SceneDelegate.swift */; };
@@ -57,6 +58,7 @@
 				36F3B96024ABD3710031568E /* RealmSwift.framework in Embed Frameworks */,
 				36F3B95A24ABD3710031568E /* SVProgressHUD.framework in Embed Frameworks */,
 				36F3B95C24ABD3710031568E /* Alamofire.framework in Embed Frameworks */,
+				36202DA124C4DF0200C21158 /* Kingfisher.framework in Embed Frameworks */,
 				36F3B95824ABD3700031568E /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -80,7 +82,7 @@
 		361D650B24C1BC8C001F211D /* CurrentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentViewController.swift; sourceTree = "<group>"; };
 		361D650C24C1BC8C001F211D /* CurrentWeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeatherModel.swift; sourceTree = "<group>"; };
 		361D650D24C1BC8C001F211D /* WeatherLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherLoader.swift; sourceTree = "<group>"; };
-		361D651C24C1CEEE001F211D /* WeatherPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPersistance.swift; sourceTree = "<group>"; };
+		36202D9F24C4DF0200C21158 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		3676BF9124B274D6005DDCAF /* TasksPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksPersistance.swift; sourceTree = "<group>"; };
 		36F3B93724ABC9320031568E /* Skillbox-14-CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skillbox-14-CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F3B93A24ABC9320031568E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				36F3B95F24ABD3710031568E /* RealmSwift.framework in Frameworks */,
 				36F3B95924ABD3700031568E /* SVProgressHUD.framework in Frameworks */,
 				36F3B95B24ABD3710031568E /* Alamofire.framework in Frameworks */,
+				36202DA024C4DF0200C21158 /* Kingfisher.framework in Frameworks */,
 				36F3B95724ABD3700031568E /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +174,7 @@
 		36F3B95124ABD3700031568E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36202D9F24C4DF0200C21158 /* Kingfisher.framework */,
 				36F3B95424ABD3700031568E /* Alamofire.framework */,
 				36F3B95524ABD3700031568E /* Realm.framework */,
 				36F3B95624ABD3700031568E /* RealmSwift.framework */,
@@ -199,7 +203,6 @@
 			children = (
 				36F3B96524ABD5F00031568E /* Persistance.swift */,
 				3676BF9124B274D6005DDCAF /* TasksPersistance.swift */,
-				361D651C24C1CEEE001F211D /* WeatherPersistance.swift */,
 				3617B90824BC8C5500F98142 /* CoreDataManager.swift */,
 				3617B8F124BC84B000F98142 /* CDPersistance.xcdatamodeld */,
 			);
@@ -299,7 +302,6 @@
 				36F3B96E24AD1FDA0031568E /* ToDoTableViewCell.swift in Sources */,
 				36F3B93B24ABC9320031568E /* AppDelegate.swift in Sources */,
 				36F3B96624ABD5F00031568E /* Persistance.swift in Sources */,
-				361D651D24C1CEEE001F211D /* WeatherPersistance.swift in Sources */,
 				3617B92B24BCF30100F98142 /* CDTableViewController.swift in Sources */,
 				3617B8F324BC84B000F98142 /* CDPersistance.xcdatamodeld in Sources */,
 				361D651424C1BC8C001F211D /* CurrentWeatherModel.swift in Sources */,

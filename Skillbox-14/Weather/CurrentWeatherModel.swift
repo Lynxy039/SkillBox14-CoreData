@@ -10,14 +10,14 @@ import Foundation
 import SwiftyJSON
 import RealmSwift
 
-class CurrentWeather{
-  var city: String
-  var imageName: String
-  var description: String
-  var curT: Int
-  var minT: Int
-  var maxT: Int
-  var feels: Int
+class CurrentWeather: Object{
+  @objc dynamic var city: String = ""
+  @objc dynamic var imageName: String = ""
+  @objc dynamic var descript: String = ""
+  @objc dynamic var curT: Int = 0
+  @objc dynamic var minT: Int = 0
+  @objc dynamic var maxT: Int = 0
+  @objc dynamic var feels: Int = 0
   
   init?(data: JSON){
     guard let city = data["name"].string,
@@ -31,47 +31,31 @@ class CurrentWeather{
     }
     self.city = city
     self.imageName = imageName
-    self.description = description
+    self.descript = description
     self.curT = Int(curT)
     self.minT = Int(minT)
     self.maxT = Int(maxT)
     self.feels = Int(feels)
+  }  
+  required init() {}
+}
+class CurrentWeatherPersistance{
+  static let shared = CurrentWeatherPersistance()
+  private let realm = try! Realm()
+  
+  func load() -> ([CurrentWeather]){
+    var array: [CurrentWeather] = []
+    let current = realm.objects(CurrentWeather.self)
+    for i in current {
+      array += [i]
+    }
+    return array
   }
-  init?(realm: CurrentWeatherRealm){
-    self.city = realm.city
-    self.imageName = realm.imageName
-    self.description = realm.description
-    self.curT = Int(realm.curT)
-    self.minT = Int(realm.minT)
-    self.maxT = Int(realm.maxT)
-    self.feels = Int(realm.feels)
+  func save(_ forSave: CurrentWeather){
+    let oldObject = realm.objects(CurrentWeather.self)
+    try! realm.write{
+      realm.delete(oldObject)
+      realm.add(forSave)
+    }
   }
 }
-//class CurrentWeatherRealm: Object{
-//  @objc dynamic var city: String = ""
-//  @objc dynamic var imageName: String = ""
-//  @objc dynamic var descript: String = ""
-//  @objc dynamic var curT: Int = 0
-//  @objc dynamic var minT: Int = 0
-//  @objc dynamic var maxT: Int = 0
-//  @objc dynamic var feels: Int = 0
-//}
-//class CurrentPersistance{
-//  static let shared = CurrentPersistance()
-//  
-//  private let realm = try! Realm()
-//  
-//  func load() -> [CurrentWeatherRealm]{
-//      var currentArray: [CurrentWeatherRealm] = []
-//      let allCurrent = realm.objects(CurrentWeatherRealm.self)
-//      for i in allCurrent {currentArray += [i]}
-//      return currentArray
-//  }
-//
-//  func save(_ forSave: [CurrentWeatherRealm]){
-//    try! realm.write{
-//      realm.delete(load())
-//      realm.add(forSave)
-//    }
-//  }
-//}

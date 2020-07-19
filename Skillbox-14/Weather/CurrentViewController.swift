@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CurrentViewController: UIViewController {
   @IBOutlet weak var cityLable: UILabel!
@@ -23,22 +24,21 @@ class CurrentViewController: UIViewController {
     super.viewDidLoad()
     currentView.layer.cornerRadius = 30
     tempView.layer.cornerRadius = 15
-    let (current, image, _, _) = WeatherPersistance.shared.load()
-    if let weather = CurrentWeather(realm: current[0]),let image = image[0]{
-      assigment(weather, image)
-    }
-    WeatherLoader().loadCurrentWeather { weather, image in
-      self.assigment(weather, image)
+    let current = CurrentWeatherPersistance.shared.load()[0]
+    self.assigment(current)
+  }
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    WeatherLoader().loadCurrentWeather { weather in
+      self.assigment(weather)
+      CurrentWeatherPersistance.shared.save(weather)
     }
   }
-  
-  
-  func assigment(_ weather: CurrentWeather,_ image: Data?){
+  func assigment(_ weather: CurrentWeather){
     self.cityLable.text = weather.city + ", " + dateFormatter(Date(), format: "MMMMdEE")
-    if let image = image {
-      self.weatherImageView.image = UIImage(data: image)
-    }
-    self.descriptionLable.text = weather.description
+    let url = URL(string: "https://openweathermap.org/img/wn/\(weather.imageName)@2x.png")
+    self.weatherImageView.kf.setImage(with: url)
+    self.descriptionLable.text = weather.descript
     self.curTLable.text = "\(weather.curT)℃"
     self.minTLable.text = "\(weather.minT)"
     self.maxTLable.text = "\(weather.maxT)"
