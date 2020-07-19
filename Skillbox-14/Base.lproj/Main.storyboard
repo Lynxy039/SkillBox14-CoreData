@@ -18,19 +18,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="QKj-QC-esh">
                                 <rect key="frame" x="37.5" y="233.5" width="300" height="200"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2V-ci-AgK">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="i2V-ci-AgK">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="75"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
+                                            <action selector="doneName:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="xvc-vY-EaN"/>
                                             <action selector="namePrinted:" destination="BYZ-38-t0r" eventType="editingChanged" id="a3j-aw-hU9"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Say-ng-JiW">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Say-ng-JiW">
                                         <rect key="frame" x="0.0" y="125" width="300" height="75"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
+                                            <action selector="doneSur:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="buI-od-SNi"/>
                                             <action selector="surnamePrinted:" destination="BYZ-38-t0r" eventType="editingChanged" id="IK1-N7-4ak"/>
                                         </connections>
                                     </textField>

@@ -21,7 +21,6 @@ class CDToDoViewController: UIViewController {
       return
     }
     if task != ""{
-//      TaskPersistance.shared.addTask(task)
       CoreDataManager.instance.saveData(data: task)
     }
     reloadTableView()

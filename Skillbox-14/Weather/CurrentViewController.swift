@@ -24,8 +24,10 @@ class CurrentViewController: UIViewController {
     super.viewDidLoad()
     currentView.layer.cornerRadius = 30
     tempView.layer.cornerRadius = 15
-    let current = CurrentWeatherPersistance.shared.load()[0]
-    self.assigment(current)
+    if CurrentWeatherPersistance.shared.load() != [] {
+      let current = CurrentWeatherPersistance.shared.load()[0]
+      self.assigment(current)
+    }
   }
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)

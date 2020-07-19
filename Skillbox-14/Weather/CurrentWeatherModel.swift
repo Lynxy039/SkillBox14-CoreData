@@ -43,7 +43,7 @@ class CurrentWeatherPersistance{
   static let shared = CurrentWeatherPersistance()
   private let realm = try! Realm()
   
-  func load() -> ([CurrentWeather]){
+  func load() -> [CurrentWeather]{
     var array: [CurrentWeather] = []
     let current = realm.objects(CurrentWeather.self)
     for i in current {
