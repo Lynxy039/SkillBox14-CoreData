@@ -46,7 +46,8 @@ class WeatherLoader{
           SVProgressHUD.dismiss()
         }
       case .failure(let error):
-          print(error)
+        print(error)
+        SVProgressHUD.dismiss()
       }
     }
   }
