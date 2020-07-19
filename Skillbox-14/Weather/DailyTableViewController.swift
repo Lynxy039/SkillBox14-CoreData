@@ -31,7 +31,6 @@ class DailyTableViewController: UIViewController {
       self.tableView.reloadData()
       DailyWeatherPersistance.shared.save(daily)
     }
-    SVProgressHUD.dismiss()
   }
 }
 

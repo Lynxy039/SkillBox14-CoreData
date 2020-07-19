@@ -43,6 +43,7 @@ class WeatherLoader{
         }
         DispatchQueue.main.async {
           completion(daily)
+          SVProgressHUD.dismiss()
         }
       case .failure(let error):
           print(error)
